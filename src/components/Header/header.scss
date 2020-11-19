@@ -1,0 +1,141 @@
+@mixin wise {
+  background: -webkit-linear-gradient(rgb(255, 103, 1), rgb(185, 5, 221));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header {
+  height: 100px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  p {
+    @include wise();
+    margin-left: 20px;
+  }
+
+  span {
+    margin-right: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .nav {
+    &__element {
+      padding: 0 26px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    &__link {
+      color: grey;
+      font-weight: 700;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      padding: 28px 18px 22px;
+      border-bottom: 4px solid transparent;
+      letter-spacing: 0.1875rem;
+
+      &:hover {
+        color: black;
+        border-color: #3fa7e0;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+      position: absolute;
+      left: 0;
+      top: 95px;
+      flex-direction: column;
+      background-color: white;
+      width: 100%;
+      padding-bottom: 20px;
+      display: none;
+
+      .nav__element {
+        padding: 0;
+      }
+
+      .nav__link {
+        display: block;
+        padding: 14px 20px;
+      }
+    }
+  }
+
+  .menu {
+    &__btn {
+      display: none;
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      opacity: 0;
+
+      @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+        &:checked {
+          ~ .header__nav {
+            display: flex;
+          }
+
+          ~ .menu__toggle {
+            span {
+              &:nth-child(1) {
+                transform: rotate(45deg) translate(2px, 5px);
+              }
+              &:nth-child(2) {
+                opacity: 0;
+              }
+              &:nth-child(3) {
+                transform: rotate(-45deg) translate(2px, -5px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__toggle {
+      display: none;
+
+      span {
+        width: 20px;
+        height: 2px;
+        display: block;
+        margin-bottom: 3px;
+        background-color: black;
+        transition: 0.3s all ease-in-out;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+        display: block;
+      }
+    }
+  }
+
+  @media only screen and (min-device-width: 1024px) {
+    .header__container {
+      font-size: 40px;
+    }
+    .nav__link {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+@mixin wise {
+  background: -webkit-linear-gradient(rgb(255, 103, 1), rgb(185, 5, 221));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.promo {
+  background-image: url("../img/cool-background.png");
+}
+
+footer {
+  margin-top: 30px;
+  div {
+    display: flex;
+    width: 100vw;
+    height: 50px;
+    align-items: center;
+    justify-content: flex-end;
+
+    p {
+      font-size: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.promo_slider {
+  padding-top: 30px;
+  width: 100vw;
+  justify-content: center;
+  display: flex;
+}
+.banner_promo_container {
+  padding-top: 30px;
+  width: 100vw;
+  justify-content: center;
+  display: flex;
+
+  .banner_promo_bil {
+    width: 300px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../img/promo_banner.jpg");
+  }
+}
+
+.promo_offer {
+  margin: 0 auto;
+  width: 80vw;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  img {
+    width: 70px;
+    height: 70px;
+
+    &:nth-child(2) {
+      border-radius: 50%;
+    }
+    &:nth-child(1) {
+      border-radius: 50%;
+    }
+    &:nth-child(3) {
+      border-radius: 50%;
+    }
+  }
+}
+.offer_code {
+  margin: 20px auto;
+  width: 100vw;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-evenly;
+}
+
+.promo_code {
+  @include wise;
+  font-size: 20px;
+  margin: 0 auto;
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (min-device-width: 375px) {
+  .banner_promo {
+    height: 300px;
+  }
+
+  .promo_offer {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    width: 100vw;
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  .offer_code,
+  .promo_code {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 55px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) {
+  .banner_promo_container {
+    padding-top: 30px;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+
+    .banner_promo_bil {
+      width: 600px;
+      height: 400px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("../img/promo_banner.jpg");
+    }
+  }
+
+  .promo_code {
+    font-size: 40px;
+    @include wise();
+  }
+
+  .promo_offer,
+  .promo_code {
+    height: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+
+    img {
+      width: 220px;
+      height: 220px;
+    }
+  }
+  .offer_code {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+
+    .eye {
+      font-size: 25px;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1140px) {
+  .banner_promo_container {
+    padding-top: 30px;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+
+    .banner_promo_bil {
+      width: 800px;
+      height: 500px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("../img/promo_banner.jpg");
+    }
+  }
+
+  .promo_slider {
+    padding-top: 30px;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    height: 300px;
+  }
+
+  .banner_promo {
+    height: 700px;
+  }
+
+  .promo_offer {
+    height: 450px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+
+    img {
+      width: 420px;
+      height: 420px;
+    }
+  }
+  .offer_code,
+  .promo_code {
+    width: 95vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 110px;
+
+    .eye {
+      font-size: 55px;
+    }
+  }
+}
