@@ -1,3 +1,5 @@
+App is designed for mobiles devices! 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
