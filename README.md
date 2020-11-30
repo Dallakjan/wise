@@ -1,5 +1,9 @@
 App is designed for mobiles devices! 
 
+App is comparing prices of products from inputs. App get prices from cloud firestore.
+
+The idea was to make the cheapest shopping as it is possible.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
