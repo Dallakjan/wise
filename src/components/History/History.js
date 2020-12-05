@@ -101,7 +101,7 @@ export default function Hisotry() {
       <div className="formContainer">
         <Form>
           <Form.Label className="form" htmlFor="product">
-            Wpisz produkt
+            Enter Product
           </Form.Label>
           {inputList.map((x, i) => {
             return (
@@ -117,12 +117,12 @@ export default function Hisotry() {
                       className="mr10"
                       onClick={() => handleRemoveClick(i)}
                     >
-                      Usuń
+                      Delete
                     </Button>
                   )}
                   {inputList.length - 1 === i && (
                     <Button className="mr10" onClick={handleAddClick}>
-                      Dodaj
+                      Add
                     </Button>
                   )}
                 </div>
@@ -137,7 +137,7 @@ export default function Hisotry() {
             type="submit"
             onClick={handleSearch}
           >
-            Wyszukaj
+            Search
           </Button>
         </Form>
       </div>
@@ -152,7 +152,7 @@ export default function Hisotry() {
                 <td>
                   {product.shops.map((shop) => (
                     <div key={shop.name}>
-                      Cena: {shop.price}, {shop.name}
+                      Price: {shop.price}, {shop.name}
                     </div>
                   ))}
                 </td>

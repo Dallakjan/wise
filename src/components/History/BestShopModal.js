@@ -20,7 +20,7 @@ export default function BestShopModal(props) {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={props.handleClose}>
-            Zamknij
+            Close
           </Button>
           {/* <Button variant="primary" onClick={props.handleClose}>
             Save Changes
